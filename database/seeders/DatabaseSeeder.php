@@ -21,8 +21,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             MovieSeeder::class,
             VideogameSeeder::class,
-            ComicsTableSeeder::class,
-            CardsTableSeeder::class,
+            ComicSeeder::class,
+            CardSeeder::class,
         ]);
     }
 }
