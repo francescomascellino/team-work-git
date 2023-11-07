@@ -18,9 +18,11 @@ class VideogameSeeder extends Seeder
             $new_game = new Videogame();
             $new_game->title = $faker->realText(50);
             $new_game->image = $faker->imageUrl();
-            $new_game->price = $faker->randomFloat(2, 1, 999);
+            $new_game->price = $faker->randomFloat(2, 10, 999);
+            $new_game->release_date = $faker->date();
             $new_game->developer = $faker->company();
-            $new_game->publisher = $faker->company();
+            $new_game->publisher = $faker->realText(50);
+            $new_game->save();
         }
     }
 }
