@@ -16,13 +16,11 @@ class VideogameSeeder extends Seeder
     {
         for ($i = 0; $i < 8; $i++) {
             $new_game = new Videogame();
-            $new_game->title = $faker->realText(50);
+            $new_game->title = $faker->realText(48);
             $new_game->image = $faker->imageUrl();
-            $new_game->price = $faker->randomFloat(2, 1, 999);
-            $new_game->release_date = $faker->dateTimeBetween('-30 years', '+3 years');
+            $new_game->price = $faker->randomFloat(2, 2, 999);
             $new_game->developer = $faker->company();
-            $new_game->publisher = $faker->realText(50);
-            $new_game->save();
+            $new_game->publisher = $faker->company();
         }
     }
 }
